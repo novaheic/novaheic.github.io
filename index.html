@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Heidt | Portfolio</title>
+    <meta
+      name="description"
+      content="Nova Heidt's project portfolio: research, development, and media."
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="home">
+    <main class="page-shell">
+      <section class="profile-card reveal">
+        <img
+          id="profile-avatar"
+          class="profile-avatar"
+          src="assets/img/profile/nova-heidt.svg"
+          alt="Portrait illustration of Nova Heidt"
+          width="108"
+          height="108"
+        />
+        <h1 id="profile-name">Nova Heidt</h1>
+        <p id="profile-tagline" class="tagline">
+          Hi, I'm Nova, and I'm into tech and money, and where they intersect.
+        </p>
+        <ul id="focus-list" class="focus-list" aria-label="Focus areas">
+          <li>Research</li>
+          <li>Development</li>
+          <li>Media</li>
+        </ul>
+        <div id="profile-socials" class="social-links profile-socials" aria-label="Profile links"></div>
+      </section>
+
+      <section class="projects-block">
+        <header class="section-header reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h2>Projects</h2>
+        </header>
+        <div id="project-list" class="project-list" aria-live="polite"></div>
+      </section>
+
+      <section class="publications-block">
+        <header class="section-header reveal">
+          <p class="eyebrow">Research</p>
+          <h2>Publications</h2>
+        </header>
+        <div id="publication-list" class="publication-list" aria-live="polite"></div>
+        <header class="section-header sub-section-header reveal">
+          <h3>Articles</h3>
+        </header>
+        <div id="article-list" class="publication-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <template id="project-card-template">
+      <article class="project-card reveal">
+        <div class="project-visual">
+          <a class="project-banner-link" data-role="detail-link" href="#">
+            <img class="project-banner" src="" alt="" loading="lazy" />
+          </a>
+          <span class="award-badge" data-role="award-badge" hidden>🏆 Hackathon Winner</span>
+          <img class="project-icon project-icon-overlap" src="" alt="" loading="lazy" width="72" height="72" />
+        </div>
+        <div class="project-main">
+          <div class="project-headline">
+            <a class="project-title" data-role="detail-link" href="#"></a>
+            <div class="project-meta">
+              <p class="project-date"></p>
+              <span class="status-tag" data-role="status-tag"></span>
+            </div>
+          </div>
+        </div>
+        <p class="project-one-liner"></p>
+        <div class="project-actions">
+          <a class="pill-link" data-role="primary-link" target="_blank" rel="noopener noreferrer"
+            >Visit</a
+          >
+          <a class="pill-link subtle" data-role="backup-link" target="_blank" rel="noopener noreferrer"
+            >Backup</a
+          >
+          <a
+            class="pill-link subtle deck-link icon-only-link"
+            data-role="deck-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open pitch deck"
+            title="Open pitch deck"
+          ></a>
+          <div class="social-links" data-role="social-links"></div>
+        </div>
+      </article>
+    </template>
+
+    <template id="publication-item-template">
+      <article class="publication-item reveal">
+        <div class="publication-main">
+          <a class="publication-title" data-role="publication-primary" href="#" target="_blank" rel="noopener noreferrer"></a>
+          <p class="publication-meta"></p>
+        </div>
+        <p class="publication-one-liner"></p>
+      </article>
+    </template>
+
+    <script src="assets/data/portfolio-data.js"></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
