@@ -1,5 +1,9 @@
 :root {
   --bg: #1a1c21;
+  --page-background:
+    radial-gradient(circle at 14% 12%, rgba(51, 56, 65, 0.26) 0%, transparent 38%),
+    radial-gradient(circle at 82% 84%, rgba(43, 47, 55, 0.24) 0%, transparent 40%),
+    linear-gradient(168deg, #1b1e24 0%, #20242b 48%, #252a32 100%);
   --surface: #23262d;
   --surface-elevated: #292d35;
   --surface-soft: #2f3440;
@@ -29,18 +33,10 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #1b1e24;
-}
-
-html {
-  overscroll-behavior-y: none;
+  background: var(--page-background);
 }
 
 body {
-  background:
-    radial-gradient(circle at 14% 12%, rgba(51, 56, 65, 0.26) 0%, transparent 38%),
-    radial-gradient(circle at 82% 84%, rgba(43, 47, 55, 0.24) 0%, transparent 40%),
-    linear-gradient(168deg, #1b1e24 0%, #20242b 48%, #252a32 100%);
   color: var(--text-main);
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
