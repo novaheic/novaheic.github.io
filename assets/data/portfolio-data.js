@@ -137,7 +137,10 @@ window.PORTFOLIO_DATA = {
       iconImage: "assets/img/projects/HandOffLogo.png",
       primaryUrl: "https://hand-off.xyz/",
       backupUrl: "https://admirable-bubblegum-d5ad00.netlify.app/",
-      socials: [{ platform: "ethglobal", url: "https://ethglobal.com/showcase/handoff-h1a8i" }],
+      socials: [
+        { platform: "ethglobal", url: "https://ethglobal.com/showcase/handoff-h1a8i" },
+        { platform: "github", url: "https://github.com/JPier34/Hand-Off" }
+      ],
       details:
         "HandOff is an Ethereum-based escrow service designed for private, cashless, in-person transactions between marketplace users. Before meeting, buyer and seller agree on terms and the seller deploys an escrow contract; the buyer deposits funds and receives a four-digit unlock code tied to release logic. At handoff, the buyer shares the code and the seller receives payment, creating a simple cryptographic settlement flow without requiring trust in the counterparty. The project was built during ETHGlobal Cannes and remains deployed as a testable prototype demonstrating how smart contracts can reduce fraud risk in peer-to-peer commerce.",
       detailMedia: [
