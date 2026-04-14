@@ -24,7 +24,10 @@ window.PORTFOLIO_DATA = {
       socials: [{ platform: "linkedin", url: "https://www.linkedin.com/company/coverpaste/" }],
       details:
         "Coverpaste helps applicants turn raw job descriptions and background material into tailored cover letters quickly, with optional proofreading and formatting for final submission.",
-      pitchDeckUrl: ""
+      pitchDeckUrl: "",
+      awardLabel: "200+ Users",
+      awardEmoji: "👥",
+      awardVariant: "users"
     },
     {
       slug: "vmtree",
