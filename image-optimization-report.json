@@ -1,0 +1,226 @@
+[
+  {
+    "path": "assets/img/profile/nova-heidt.jpg",
+    "before": 11047,
+    "after": 10598,
+    "saved": 449,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/BESIDEBanner.png",
+    "before": 135293,
+    "after": 130164,
+    "saved": 5129,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/besidecourse.png",
+    "before": 134200,
+    "after": 130419,
+    "saved": 3781,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/BESIDELogo.png",
+    "before": 15384,
+    "after": 15384,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/CoverPasteBanner.png",
+    "before": 571302,
+    "after": 520201,
+    "saved": 51101,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/CoverPasteLogo.png",
+    "before": 95667,
+    "after": 89088,
+    "saved": 6579,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/ethergy1.png",
+    "before": 1509811,
+    "after": 1091797,
+    "saved": 418014,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/ethergy2.png",
+    "before": 2766639,
+    "after": 1745177,
+    "saved": 1021462,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/EthergyBanner.png",
+    "before": 535364,
+    "after": 484642,
+    "saved": 50722,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/EthergyLogo.png",
+    "before": 182348,
+    "after": 182348,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/FinzenBanner.png",
+    "before": 568377,
+    "after": 568377,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/FinzenLogo.png",
+    "before": 18993,
+    "after": 18993,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/Finzen_Month.PNG",
+    "before": 111408,
+    "after": 111408,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/finzen_portfolio.png",
+    "before": 780721,
+    "after": 780721,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/finzen_sankey.PNG",
+    "before": 633261,
+    "after": 573548,
+    "saved": 59713,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/HandOff Pitch.png",
+    "before": 1233866,
+    "after": 816573,
+    "saved": 417293,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/HandOffBanner.png",
+    "before": 179823,
+    "after": 168045,
+    "saved": 11778,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/HandOffLogo.png",
+    "before": 31127,
+    "after": 28455,
+    "saved": 2672,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/handoff_preview.png",
+    "before": 108167,
+    "after": 105914,
+    "saved": 2253,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/LiquidRainforestsBanner.png",
+    "before": 562796,
+    "after": 547384,
+    "saved": 15412,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/LiquidRainforestsLogo.png",
+    "before": 72089,
+    "after": 69544,
+    "saved": 2545,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/VeriFiBanner.png",
+    "before": 181175,
+    "after": 181175,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/Verifidescription.png",
+    "before": 410984,
+    "after": 298553,
+    "saved": 112431,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/VerifiLogo.png",
+    "before": 15000,
+    "after": 15000,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/VMTreeBanner.png",
+    "before": 122295,
+    "after": 122295,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/VMTreeLogo.png",
+    "before": 47700,
+    "after": 47700,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/WattWitnessBanner.png",
+    "before": 764231,
+    "after": 750967,
+    "saved": 13264,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/WattWitnessLogo.png",
+    "before": 42981,
+    "after": 38516,
+    "saved": 4465,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/ww1.png",
+    "before": 265294,
+    "after": 259880,
+    "saved": 5414,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/ww2.png",
+    "before": 1073216,
+    "after": 1015093,
+    "saved": 58123,
+    "changed": true
+  },
+  {
+    "path": "assets/img/projects/ww3.png",
+    "before": 3182261,
+    "after": 3182261,
+    "saved": 0,
+    "changed": false
+  },
+  {
+    "path": "assets/img/projects/ww4.png",
+    "before": 6660509,
+    "after": 6660509,
+    "saved": 0,
+    "changed": false
+  }
+]

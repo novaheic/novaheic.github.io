@@ -143,11 +143,16 @@ function renderDetailActionLink(url, label, iconMarkup, extraClasses = "") {
   return `<a class="pill-link detail-action-link${classSuffix}" href="${url}" target="_blank" rel="noopener noreferrer"><span class="detail-action-icon" aria-hidden="true">${iconMarkup}</span><span class="detail-action-label">${label}</span></a>`;
 }
 
-function renderProjectMedia(mediaItems, position = "afterDetails") {
+function shouldEnableImageOpenInNewTab(projectSlug) {
+  return projectSlug === "wattwitness" || projectSlug === "ethergy";
+}
+
+function renderProjectMedia(mediaItems, projectSlug, position = "afterDetails") {
   if (!Array.isArray(mediaItems) || mediaItems.length === 0) return "";
 
   const matchingItems = mediaItems.filter((item) => (item.position || "afterDetails") === position);
   if (matchingItems.length === 0) return "";
+  const openImagesInNewTab = shouldEnableImageOpenInNewTab(projectSlug);
 
   const plainMarkup = [];
   const cardMarkup = [];
@@ -161,8 +166,11 @@ function renderProjectMedia(mediaItems, position = "afterDetails") {
     if (isPlainImage) {
       const alt = item.alt || title;
       const sizeClass = item.size ? ` is-${item.size}` : "";
+      const imageMarkup = `<img class="project-inline-media${sizeClass}" src="${item.src}" alt="${alt}" loading="lazy" />`;
       plainMarkup.push(
-        `<img class="project-inline-media${sizeClass}" src="${item.src}" alt="${alt}" loading="lazy" />`
+        openImagesInNewTab
+          ? `<a class="project-inline-media-link" href="${item.src}" target="_blank" rel="noopener noreferrer" aria-label="Open ${alt} in a new tab">${imageMarkup}</a>`
+          : imageMarkup
       );
       return;
     }
@@ -179,8 +187,9 @@ function renderProjectMedia(mediaItems, position = "afterDetails") {
 
     if (hasUrl(item.src)) {
       const alt = item.alt || title;
+      const imageMarkup = `<img class="project-media-image" src="${item.src}" alt="${alt}" loading="lazy" />`;
       cardMarkup.push(
-        `<figure class="project-media-card"><img class="project-media-image" src="${item.src}" alt="${alt}" loading="lazy" />${caption ? `<figcaption class="project-media-caption">${caption}</figcaption>` : ""}</figure>`
+        `<figure class="project-media-card">${openImagesInNewTab ? `<a class="project-media-image-link" href="${item.src}" target="_blank" rel="noopener noreferrer" aria-label="Open ${alt} in a new tab">${imageMarkup}</a>` : imageMarkup}${caption ? `<figcaption class="project-media-caption">${caption}</figcaption>` : ""}</figure>`
       );
       return;
     }
@@ -193,48 +202,66 @@ function renderProjectMedia(mediaItems, position = "afterDetails") {
   return `${plainMarkup.join("")}${cardMarkup.length ? `<section class="project-detail-media" aria-label="Project visuals">${cardMarkup.join("")}</section>` : ""}`;
 }
 
-function extractDateScore(value) {
-  if (!value || typeof value !== "string") return 0;
-  const text = value.trim().toLowerCase();
-  if (text.includes("current")) return Number.MAX_SAFE_INTEGER;
+const MONTH_MAP = {
+  january: 1,
+  february: 2,
+  march: 3,
+  april: 4,
+  may: 5,
+  june: 6,
+  july: 7,
+  august: 8,
+  september: 9,
+  october: 10,
+  november: 11,
+  december: 12
+};
 
-  const parsed = Date.parse(value);
-  if (!Number.isNaN(parsed)) return parsed;
+function scoreDateToken(token) {
+  if (!token || typeof token !== "string") return 0;
+  const text = token.trim().toLowerCase();
+  if (!text) return 0;
+  if (text.includes("current") || text.includes("present") || text === "now") {
+    return Number.MAX_SAFE_INTEGER;
+  }
 
-  const monthMap = {
-    january: 1,
-    february: 2,
-    march: 3,
-    april: 4,
-    may: 5,
-    june: 6,
-    july: 7,
-    august: 8,
-    september: 9,
-    october: 10,
-    november: 11,
-    december: 12
-  };
-
-  const monthMatch = text.match(
-    /(january|february|march|april|may|june|july|august|september|october|november|december)\s+(\d{4})/
+  const monthYearMatch = text.match(
+    /\b(january|february|march|april|may|june|july|august|september|october|november|december)\s+(\d{4})\b/
   );
-  if (monthMatch) {
-    const month = monthMap[monthMatch[1]] || 1;
-    const year = Number(monthMatch[2]);
+  if (monthYearMatch) {
+    const month = MONTH_MAP[monthYearMatch[1]] || 1;
+    const year = Number(monthYearMatch[2]);
     return year * 100 + month;
   }
 
-  const yearMatches = [...text.matchAll(/\b(19|20)\d{2}\b/g)].map((match) => Number(match[0]));
-  if (yearMatches.length > 0) {
-    return Math.max(...yearMatches) * 100;
+  const yearMatch = text.match(/\b(19|20)\d{2}\b/);
+  if (yearMatch) {
+    return Number(yearMatch[0]) * 100;
   }
 
   return 0;
 }
 
+function extractDateScore(value) {
+  if (!value || typeof value !== "string") return 0;
+  const normalized = value.replace(/[–—]/g, "-").trim();
+  const segments = normalized
+    .split("-")
+    .map((segment) => segment.trim())
+    .filter(Boolean);
+
+  // For ranges like "2022-2024" or "2024-Current", rank by end date.
+  const endToken = segments.length > 1 ? segments[segments.length - 1] : normalized;
+  return scoreDateToken(endToken);
+}
+
 function sortByNewest(items, dateKey) {
-  return [...items].sort((a, b) => extractDateScore(b[dateKey]) - extractDateScore(a[dateKey]));
+  return [...items].sort((a, b) => {
+    const scoreDiff = extractDateScore(b[dateKey]) - extractDateScore(a[dateKey]);
+    if (scoreDiff !== 0) return scoreDiff;
+    // Deterministic order for equal scores across all environments.
+    return (a.title || "").localeCompare(b.title || "");
+  });
 }
 
 function applyProfile(profile) {
@@ -447,8 +474,8 @@ function renderProjectDetail(project) {
     });
   }
 
-  const mediaAfterOneLinerMarkup = renderProjectMedia(project.detailMedia, "afterOneLiner");
-  const mediaAfterDetailsMarkup = renderProjectMedia(project.detailMedia, "afterDetails");
+  const mediaAfterOneLinerMarkup = renderProjectMedia(project.detailMedia, project.slug, "afterOneLiner");
+  const mediaAfterDetailsMarkup = renderProjectMedia(project.detailMedia, project.slug, "afterDetails");
 
   container.innerHTML = `
     <img class="project-banner detail-banner" src="${project.bannerImage}" alt="${project.title} banner" />

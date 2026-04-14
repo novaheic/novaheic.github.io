@@ -17,7 +17,7 @@ window.PORTFOLIO_DATA = {
       status: "live",
       date: "March 2025",
       oneLiner: "AI cover letters from your CV and job post.",
-      bannerImage: "assets/img/projects/CoverPasteBanner.png",
+      bannerImage: "assets/img/projects/CoverPasteBanner.webp",
       iconImage: "assets/img/projects/CoverPasteLogo.png",
       primaryUrl: "https://coverpaste.com/",
       backupUrl: "https://coverpaste.vercel.app/",
@@ -92,7 +92,7 @@ window.PORTFOLIO_DATA = {
       status: "prototype",
       date: "June 2025",
       oneLiner: "DePIN meter protocol for source-signed energy data.",
-      bannerImage: "assets/img/projects/WattWitnessBanner.png",
+      bannerImage: "assets/img/projects/WattWitnessBanner.webp",
       iconImage: "assets/img/projects/WattWitnessLogo.png",
       primaryUrl: "https://wattwitness.com/",
       backupUrl: "https://wattwitness-9a252.web.app/",
@@ -109,17 +109,17 @@ window.PORTFOLIO_DATA = {
           position: "afterDetails"
         },
         {
-          src: "assets/img/projects/ww2.png",
+          src: "assets/img/projects/ww2.webp",
           alt: "WattWitness system architecture diagram",
           position: "afterDetails"
         },
         {
-          src: "assets/img/projects/ww3.png",
+          src: "assets/img/projects/ww3.webp",
           alt: "WattWitness terminal log screenshot",
           position: "afterDetails"
         },
         {
-          src: "assets/img/projects/ww4.png",
+          src: "assets/img/projects/ww4.webp",
           alt: "WattWitness hardware setup photo",
           position: "afterDetails"
         }
@@ -142,7 +142,7 @@ window.PORTFOLIO_DATA = {
         "HandOff is an Ethereum-based escrow service designed for private, cashless, in-person transactions between marketplace users. Before meeting, buyer and seller agree on terms and the seller deploys an escrow contract; the buyer deposits funds and receives a four-digit unlock code tied to release logic. At handoff, the buyer shares the code and the seller receives payment, creating a simple cryptographic settlement flow without requiring trust in the counterparty. The project was built during ETHGlobal Cannes and remains deployed as a testable prototype demonstrating how smart contracts can reduce fraud risk in peer-to-peer commerce.",
       detailMedia: [
         {
-          src: "assets/img/projects/HandOff Pitch.png",
+          src: "assets/img/projects/HandOff Pitch.webp",
           alt: "HandOff solution overview slide",
           style: "plain",
           position: "afterDetails",
@@ -164,7 +164,7 @@ window.PORTFOLIO_DATA = {
       status: "live",
       date: "2024-Current",
       oneLiner: "Encrypted finance dashboard for budgets, portfolios, and net worth.",
-      bannerImage: "assets/img/projects/FinzenBanner.png",
+      bannerImage: "assets/img/projects/FinzenBanner.webp",
       iconImage: "assets/img/projects/FinzenLogo.png",
       primaryUrl: "https://finzen.org/",
       backupUrl: "",
@@ -177,13 +177,13 @@ window.PORTFOLIO_DATA = {
         "Finzen is a privacy-first personal finance platform built as a manual all-in-one command center for money management. It starts with envelope budgeting principles inspired by YNAB, then extends into broader financial visibility by combining cash flow tracking, portfolio monitoring, and real-time net worth calculation in a single workflow. The portfolio layer supports multiple asset classes, including crypto, exchange-listed products, physical commodities, and foreign exchange positions, so users can understand their financial state holistically rather than account by account. The product emphasizes rich visual reporting to make trends intuitive at a glance, while strong encryption and EU hosting ensure that control over financial data remains with the user.",
       detailMedia: [
         {
-          src: "assets/img/projects/finzen_portfolio.png",
+          src: "assets/img/projects/finzen_portfolio.webp",
           alt: "Finzen multi-asset portfolio dashboard",
           style: "plain",
           position: "afterDetails"
         },
         {
-          src: "assets/img/projects/finzen_sankey.PNG",
+          src: "assets/img/projects/finzen_sankey.webp",
           alt: "Finzen sankey-style cash flow visualization",
           style: "plain",
           position: "afterDetails"
@@ -233,7 +233,7 @@ window.PORTFOLIO_DATA = {
       status: "concept",
       date: "2021-2022",
       oneLiner: "Browser MMO concept with burn-on-destruction NFT ships.",
-      bannerImage: "assets/img/projects/EthergyBanner.png",
+      bannerImage: "assets/img/projects/EthergyBanner.webp",
       iconImage: "assets/img/projects/EthergyLogo.png",
       primaryUrl: "https://ethergy-809c8.web.app/",
       backupUrl: "",
@@ -242,12 +242,12 @@ window.PORTFOLIO_DATA = {
         "Ethergy is a game-economy concept for a simple top-down browser MMO inspired by the accessibility of .io-style multiplayer games. Players would control spaceship NFTs that can gather resources, trade, and fight in an open persistent world with low onboarding friction. The core economic mechanic is permanent destruction: when a ship is lost in battle, the NFT is burned, introducing hard scarcity and creating meaningful strategic risk around every encounter. Although the project stayed at concept and internal prototype stage, it explored how blockchain ownership mechanics can produce deeper emergent economies without requiring complex gameplay systems.",
       detailMedia: [
         {
-          src: "assets/img/projects/ethergy1.png",
+          src: "assets/img/projects/ethergy1.webp",
           alt: "Ethergy UI and UX screens",
           position: "afterDetails"
         },
         {
-          src: "assets/img/projects/ethergy2.png",
+          src: "assets/img/projects/ethergy2.webp",
           alt: "Ethergy concept art collection",
           position: "afterDetails"
         }
@@ -261,7 +261,7 @@ window.PORTFOLIO_DATA = {
       status: "concept",
       date: "2022-2023",
       oneLiner: "ReFi concept for verifiable microalgae carbon removal credits.",
-      bannerImage: "assets/img/projects/LiquidRainforestsBanner.png",
+      bannerImage: "assets/img/projects/LiquidRainforestsBanner.webp",
       iconImage: "assets/img/projects/LiquidRainforestsLogo.png",
       primaryUrl: "https://www.linkedin.com/company/liquid-rainforests/",
       backupUrl: "",
