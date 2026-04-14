@@ -33,11 +33,12 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  background: var(--page-background);
+  background-color: #1b1e24;
   overscroll-behavior-y: auto;
 }
 
 body {
+  background: var(--page-background);
   color: var(--text-main);
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
